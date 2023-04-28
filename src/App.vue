@@ -64,37 +64,19 @@
         <label for="linguagens
 
 
-<script>
-const formulario = document.querySelector('#formulario');
+// Seleciona o formulário
+const form = document.querySelector('form');
 
-formulario.addEventListener('submit', (event) => {
-  event.preventDefault();
-  
-  const nome = document.querySelector('#nome').value;
-  const email = document.querySelector('#email').value;
-  const senha = document.querySelector('#senha').value;
-  const confirmacaoSenha = document.querySelector('#confirmacao-senha').value;
-  const dataNascimento = document.querySelector('#data-nascimento').value;
-  const endereco = document.querySelector('#endereco').value;
-  const cidade = document.querySelector('#cidade').value;
-  const estado = document.querySelector('#estado').value;
-  const estadoNome = document.querySelector('#estado option:checked').text;
-  const hobbies = document.querySelector('#hobbies').value;
-  const linguagensProgramacao = document.querySelector('#linguagens-programacao').value;
-  const biografia = document.querySelector('#biografia').value;
-  
-  console.log('Nome:', nome);
-  console.log('E-mail:', email);
-  console.log('Senha:', senha);
-  console.log('Confirmação de senha:', confirmacaoSenha);
-  console.log('Data de nascimento:', dataNascimento);
-  console.log('Endereço:', endereco);
-  console.log('Cidade:', cidade);
-  console.log('Estado:', estadoNome);
-  console.log('Hobbies:', hobbies);
-  console.log('Linguagens de programação:', linguagensProgramacao);
-  console.log('Biografia:', biografia);
+// Seleciona os campos de senha e confirmação de senha
+const senha = form.querySelector('#senha');
+const confirmaSenha = form.querySelector('#confirma-senha');
+
+// Adiciona um evento de envio de formulário
+form.addEventListener('submit', (event) => {
+  // Verifica se a senha e a confirmação de senha são iguais
+  if (senha.value !== confirmaSenha.value) {
+    // Se forem diferentes, impede o envio do formulário
+    event.preventDefault();
+    alert('As senhas não coincidem. Por favor, verifique e tente novamente.');
+  }
 });
-<script>
-
-
