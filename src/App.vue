@@ -60,7 +60,7 @@ form {
 <template>
         <h1>Formulário de Edição de Perfil</h1>
         
-        <form action="processa_formulario.php" method="post">
+    
   <label for="nome">Nome:</label>
   <input type="text" id="nome" name="nome" required><br><br>
 
