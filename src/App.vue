@@ -187,7 +187,7 @@ form {
     <option value="SP">São Paulo</option>
     <option value="SE">Sergipe</option>
     <option value="TO">Tocantins</option>
-  </select><br><br>
-
+  </select>
+  <br>
   <label for="hobbies">Hobbies:</label>
   <input type="text" id="hobbies" name="hobbies"><br><br>
