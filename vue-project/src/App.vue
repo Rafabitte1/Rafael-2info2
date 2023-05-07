@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+<script href="main.js"></script>
+<style href="style.css"></style>
 <html>
 <head>
     <title>Formulário de Edição de Perfil</title>
-</head>
+
 <body>
     <h1>Formulário de Edição de Perfil</h1>
     <form action="processa_formulario.php" method="post">
