@@ -1,3 +1,77 @@
+<style>orm {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+select {
+  height: 40px;
+}
+
+textarea {
+  height: 100px;
+}
+
+
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+
+br {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}</style>
+
+
+<script>function isValidDate(birthdate) {
+  const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+  if (!dateRegex.test(birthdate)) {
+    return false;
+  }
+  const parts = birthdate.split("-");
+  const year = parseInt(parts[0], 10);
+  const month = parseInt(parts[1], 10);
+  const day = parseInt(parts[2], 10);
+  if (year < 1900 || year > new Date().getFullYear()) {
+    return false;
+  }
+  if (month < 1 || month > 12) {
+    return false;
+  }
+  if (day < 1 || day > 31) {
+    return false;
+  }
+  return true;}</script>
+
+
 <title>Formulário de Edição de Perfil</title>
     <head></head>
 <template>
